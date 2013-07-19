@@ -1,9 +1,13 @@
+﻿// Node.js entry point
 var express = require('express');
+var fs = require('fs');
+var hello = "";
+
 var app = express.createServer(express.logger());
 
-fs.readFile('/etc/passwd', function (err, data) {
+fs.readFile('index.html', function (err, data) {
     if (err) throw err;
-    console.log(data);
+    hello = data;
 });
 
 app.get('/', function (request, response) {

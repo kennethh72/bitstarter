@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>8541b1b1-dc85-48bb-8521-1b318554388e</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <StartupFile>server.js</StartupFile>
+    <ProjectTypeGuids>{262852C6-CD72-467D-83FE-5EEB1973A190};{F48CDB0C-A733-4163-8884-DCAA07CF69BF}</ProjectTypeGuids>
+    <Name>NodeHw3_1</Name>
+    <RootNamespace>NodeHw3_1</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="checks.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="grader.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\.npmignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\benchmarks\htmlparser.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\History.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\lib\api\attributes.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\lib\api\manipulation.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\lib\api\traversing.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\lib\cheerio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\lib\parse.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\lib\render.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\lib\static.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\lib\utils.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\Makefile">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\.npmignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\History.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\lib\select.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\Makefile">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\browser_functions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\node_modules\CSSwhat\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\node_modules\CSSwhat\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\node_modules\CSSwhat\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\node_modules\CSSwhat\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\node_modules\CSSwhat\readme.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\node_modules\CSSwhat\tests\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\bench.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\docs\W3C_Selectors.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\helper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\nwmatcher\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\nwmatcher\scotch.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\nwmatcher\test.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\qwery\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\qwery\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\slickspeed.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\cheerio-select\Readme.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\entities\entities\html4.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\entities\entities\html5.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\entities\entities\xml.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\entities\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\entities\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\entities\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\entities\readme.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\entities\test\mocha.opts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\entities\test\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\lib\CollectingHandler.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\lib\FeedHandler.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\lib\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\lib\Parser.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\lib\ProxyHandler.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\lib\Stream.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\lib\Tokenizer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\lib\WritableStream.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domelementtype\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domelementtype\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domelementtype\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domelementtype\readme.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\readme.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\runtests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\01-basic.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\02-single_tag_1.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\03-single_tag_2.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\04-unescaped_in_script.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\05-tags_in_comment.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\06-comment_in_script.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\07-unescaped_in_style.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\08-extra_spaces_in_tag.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\09-unquoted_attrib.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\10-singular_attribute.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\11-text_outside_tags.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\12-text_only.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\13-comment_in_text.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\14-comment_in_text_in_script.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\15-non-verbose.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\16-ignore_whitespace.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\17-xml_namespace.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\18-enforce_empty_tags.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\19-ignore_empty_tags.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\20-template_script_tags.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\21-conditional_comments.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\22-lowercase_tags.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\readme.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\tests\00-runtests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\tests\02-dom_utils.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\tests\DomUtils\01-by_id.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\tests\DomUtils\02-by_tagname.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\tests\DomUtils\03-by_type.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\tests\DomUtils\04-outer_html.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\tests\DomUtils\05-inner_html.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\duplex.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\examples\CAPSLOCKTYPER.JS">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\examples\typer-fsr.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\examples\typer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\fs.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\lib\_stream_duplex.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\lib\_stream_passthrough.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\lib\_stream_readable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\lib\_stream_transform.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\lib\_stream_writable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\passthrough.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\readable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\common.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\fixtures\x1024.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-basic.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-compatibility.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-finish-pipe.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-large-read-stall.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-objects.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-pipe-error-handling.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-push.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-read-sync-stack.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-readable-empty-buffer-no-eof.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-readable-from-list.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-readable-legacy-drain.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-readable-non-empty-end.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-set-encoding.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-transform.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-unpipe-drain.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-unpipe-leak.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\test-stream2-writable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\transform.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\writable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\zlib.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\00-runtests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\01-events.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\02-stream.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\03-feed.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\99-benchmark.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\bench.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Documents\Atom_Example.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Documents\Attributes.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Documents\Basic.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Documents\RDF_Example.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Documents\RSS_Example.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\01-simple.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\02-template.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\03-lowercase_tags.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\04-cdata.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\05-cdata-special.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\06-leading-lt.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\07-self-closing.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\08-implicit-close-tags.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\09-attributes.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\10-crazy-attrib.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\11-script_in_script.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Feeds\01-rss.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Feeds\02-atom.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Feeds\03-rdf.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Stream\01-basic.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Stream\02-RSS.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Stream\03-Atom.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Stream\04-RDF.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\Stream\05-Attributes.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\htmlparser2\tests\test-helper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\.npmignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\CNAME">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\CONTRIBUTING.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\favicon.ico">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\underscore-min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\node_modules\underscore\underscore.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\Readme.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\api.attributes.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\api.manipulation.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\api.traversing.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\api.utils.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\cheerio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\fixtures.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\mocha.opts">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\parse.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\render.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\utilities.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\cheerio\test\xml.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\commander\History.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\commander\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\commander\node_modules\keypress\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\commander\node_modules\keypress\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\commander\node_modules\keypress\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\commander\node_modules\keypress\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\commander\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\commander\Readme.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="server.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="node_modules\" />
+    <Folder Include="node_modules\cheerio\" />
+    <Folder Include="node_modules\cheerio\benchmarks\" />
+    <Folder Include="node_modules\cheerio\lib\" />
+    <Folder Include="node_modules\cheerio\lib\api\" />
+    <Folder Include="node_modules\cheerio\node_modules\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\lib\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\node_modules\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\node_modules\CSSwhat\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\node_modules\CSSwhat\tests\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\docs\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\nwmatcher\" />
+    <Folder Include="node_modules\cheerio\node_modules\cheerio-select\node_modules\CSSselect\tests\qwery\" />
+    <Folder Include="node_modules\cheerio\node_modules\entities\" />
+    <Folder Include="node_modules\cheerio\node_modules\entities\entities\" />
+    <Folder Include="node_modules\cheerio\node_modules\entities\test\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\lib\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domelementtype\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domhandler\tests\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\tests\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\domutils\tests\DomUtils\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\examples\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\lib\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\fixtures\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\node_modules\readable-stream\test\simple\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\tests\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\tests\Documents\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\tests\Events\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\tests\Feeds\" />
+    <Folder Include="node_modules\cheerio\node_modules\htmlparser2\tests\Stream\" />
+    <Folder Include="node_modules\cheerio\node_modules\underscore\" />
+    <Folder Include="node_modules\cheerio\test\" />
+    <Folder Include="node_modules\commander\" />
+    <Folder Include="node_modules\commander\node_modules\" />
+    <Folder Include="node_modules\commander\node_modules\keypress\" />
+    <Folder Include="node_modules\express\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
