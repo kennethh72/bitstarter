@@ -1,7 +1,7 @@
-﻿["h1",
- ".navigation",
- ".logo",
- ".blank",
+["h1",
+".navigation",
+".logo",
+".blank",
 ".about",
 ".heading",
 ".subheading",
@@ -13,4 +13,5 @@
 ".section1",
 ".section2",
 ".faq",
-".footer"]
+".footer"
+]
