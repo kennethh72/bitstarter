@@ -82,7 +82,7 @@ if(require.main == module) {
     var checkJson;
     if(program.url){
 	console.log('program.url is defined');
-	checkJson = checkHtmlFile(program.file, program.checks);
+	checkJson = checkHtmlFile(cheerioHtmlUrl( program.url), program.checks);
     }
     else if(program.file ){
 	console.log('program.file');
