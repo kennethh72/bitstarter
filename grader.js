@@ -54,9 +54,9 @@ var loadChecks = function(checksfile) {
     return JSON.parse(fs.readFileSync(checksfile));
 };
 
-var checkHtmlFile = function(htmlfile, checks) {
+var checkHtmlFile = function(htmlfile, checksfile) {
     $ = htmlfile;
-//    var checks = loadChecks(checksfile).sort();
+    var checks = loadChecks(checksfile).sort();
     var out = {};
     for(var ii in checks) {
         var present = $(checks[ii]).length > 0;
@@ -77,15 +77,23 @@ if(require.main == module) {
         .option('-f, --file <html_file>', 'Path to index.html' )
         .option('-u, --url <html_file>', 'Url to index.html')
         .parse(process.argv);
-    console.log("program.file:" +program.file+" program.url:"+program.url);
     var checkJson;
     if(program.url){
-	console.log('program.url is defined');
-	checkJson = checkHtmlFile(cheerioHtmlUrl( program.url), program.checks);
+//	console.log("url: "+program.url);
+	rest.get(program.url).on('complete', function(result) {
+	    if (result instanceof Error) {
+		sys.puts('Error: ' + result.message);
+		this.retry(5000); // try again after 5 sec
+	    }
+            //console.log('result.message: '+result)
+	    var cher =  cheerio.load(result.message);
+	    var checkJson = checkHtmlFile(cher, program.checks);
+	    var outJson = JSON.stringify(checkJson, null, 4);
+	    console.log(outJson);
+	});
     }
     else if(program.file ){
-	console.log('program.file');
-	checkJson = checkHtmlFile(cheerioHtmlFile( program.file ),  loadChecks(program.checks).sort());
+	checkJson = checkHtmlFile(cheerioHtmlFile( program.file ), program.checks);
     }
     var outJson = JSON.stringify(checkJson, null, 4);
     console.log(outJson);
