@@ -54,10 +54,9 @@ var loadChecks = function(checksfile) {
     return JSON.parse(fs.readFileSync(checksfile));
 };
 
-var checkHtmlFile = function(htmlfile, checksfile) {
-    //$ = cheerioHtmlFile(htmlfile);
+var checkHtmlFile = function(htmlfile, checks) {
     $ = htmlfile;
-    var checks = loadChecks(checksfile).sort();
+//    var checks = loadChecks(checksfile).sort();
     var out = {};
     for(var ii in checks) {
         var present = $(checks[ii]).length > 0;
@@ -86,7 +85,7 @@ if(require.main == module) {
     }
     else if(program.file ){
 	console.log('program.file');
-	checkJson = checkHtmlFile(cheerioHtmlFile( program.file ), program.checks);
+	checkJson = checkHtmlFile(cheerioHtmlFile( program.file ),  loadChecks(program.checks).sort());
     }
     var outJson = JSON.stringify(checkJson, null, 4);
     console.log(outJson);
