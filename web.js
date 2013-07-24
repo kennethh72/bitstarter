@@ -11,7 +11,11 @@ fs.readFile('index.html', function (err, data) {
 });
 
 app.get('/', function (request, response) {
-    response.send(hello);
+  res.setHeader('Content-Type', 'text/plain');
+  res.setHeader('Content-Length', body.length);
+  res.end(hello);
+
+//    response.send(hello);
 });
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
