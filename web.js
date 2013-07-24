@@ -12,7 +12,7 @@ fs.readFile('index.html', function (err, data) {
 
 app.get('/', function (request, response) {
   response.setHeader('Content-Type', 'text/plain');
-  response.setHeader('Content-Length', body.length);
+  response.setHeader('Content-Length',hello.length);
   response.end(hello);
 
 //    response.send(hello);
