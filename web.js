@@ -11,9 +11,9 @@ fs.readFile('index.html', function (err, data) {
 });
 
 app.get('/', function (request, response) {
-  res.setHeader('Content-Type', 'text/plain');
-  res.setHeader('Content-Length', body.length);
-  res.end(hello);
+  response.setHeader('Content-Type', 'text/plain');
+  response.setHeader('Content-Length', body.length);
+  response.end(hello);
 
 //    response.send(hello);
 });
