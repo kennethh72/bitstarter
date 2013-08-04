@@ -79,15 +79,11 @@ if(require.main == module) {
         .parse(process.argv);
     var checkJson;
     if(program.url){
-//	console.log("url: "+program.url);
+//	console.log("1111");
 	rest.get(program.url).on('complete', function(result) {
-	    if (result instanceof Error) {
-		sys.puts('Error: ' + result.message);
-		this.retry(5000); // try again after 5 sec
-	    }
-            //console.log('result.message: '+result)
+//	    console.log("2222");
 	    var cher =  cheerio.load(result.message);
-	    var checkJson = checkHtmlFile(cher, program.checks);
+	    checkJson = checkHtmlFile(cher, program.checks);
 	    var outJson = JSON.stringify(checkJson, null, 4);
 	    console.log(outJson);
 	});
