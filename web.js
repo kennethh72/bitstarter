@@ -13,9 +13,11 @@ fs.readFile('index.html', function (err, data) {
 app.get('/', function (request, response) {
   response.setHeader('Content-Type', 'text/html');
   response.setHeader('Content-Length',hello.length);
-  response.end(hello);
 
-//    response.send(hello);
+  fs.readFile('index.html', function (err, data){
+      if(err) throw err;
+      response.end(data);
+});
 });
 var port = process.env.PORT || 8080;
 app.listen(port, function () {
